@@ -1,0 +1,16 @@
+.counter {
+    margin-top: 100px;
+    position: relative;
+    height: 50vh;
+}
+
+.hero.counter::after {
+    content: "";
+    background-image: url("../assets/images/some-facts-bg.png");
+    height: 50vh;
+}
+.c-stat {
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--primaryColor);
+}

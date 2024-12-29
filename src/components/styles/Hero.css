@@ -1,0 +1,45 @@
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../assets/images/home-bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 90vh;
+}
+
+.heroContainer {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 600;
+    color: var(--primaryColor);
+    font-size: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .heroContainer {
+        min-width: 80%;
+    }
+
+    .hero::after {
+        height: 60vh;
+    }
+}

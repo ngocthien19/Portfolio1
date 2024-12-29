@@ -1,0 +1,72 @@
+.portfolio {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.portfolio .box {
+    position: relative;
+    transition: all 0.5s linear;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    z-index: 2;
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primaryColor);
+    opacity: 0;
+    transition: all 0.5s linear;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+article .box:hover .overlay::after,
+article .box:hover .overlay {
+  opacity: 1;
+}
+.title {
+    text-align: center;
+    font-size: 30px;
+    color: var(--primaryColor);
+    font-weight: 600;
+}
+.catButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+.catButton button {
+  text-transform: capitalize;
+  margin-right: 20px;
+}
+
+@media screen and (max-width:768px) {
+  .catButton button {
+    margin: 0 5px;
+  }
+}
